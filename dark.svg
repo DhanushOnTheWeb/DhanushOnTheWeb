@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1180 610"
+     width="1180"
+     height="610"
+     role="img"
+     aria-label="Developer Profile Hero Banner - Professional Engineering System Dashboard">
+  <title>Developer Profile Hero - Dark Mode</title>
+  <desc>Professional engineering interface featuring terminal chrome, ASCII visual identity, core stack, and runtime systems</desc>
+
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="radialGlow1" cx="15%" cy="20%" r="55%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="radialGlow2" cx="85%" cy="25%" r="50%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="radialGlow3" cx="50%" cy="85%" r="55%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- ASCII Portrait Gradient -->
+    <linearGradient id="asciiGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+
+    <!-- Header Shimmer Gradient -->
+    <linearGradient id="borderShimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.4"/>
+      <stop offset="35%" stop-color="#38BDF8" stop-opacity="0.85"/>
+      <stop offset="70%" stop-color="#8B5CF6" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#1E293B" stop-opacity="0.4"/>
+    </linearGradient>
+
+    <!-- Scanline Gradient -->
+    <linearGradient id="scanlineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#22D3EE" stop-opacity="0.85"/>
+      <stop offset="70%" stop-color="#22D3EE" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Soft Filter for Shadows -->
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+
+    <!-- Pattern Grid -->
+    <pattern id="techGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#1E293B" stroke-width="0.75" stroke-opacity="0.22"/>
+      <circle cx="24" cy="0" r="0.8" fill="#1E293B" fill-opacity="0.33"/>
+    </pattern>
+
+    <!-- Clip Path for Viewfinder -->
+    <clipPath id="leftMapClip">
+      <rect x="10" y="40" width="412" height="294" rx="8"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .font-mono {
+      font-family: ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    }
+    .font-sans {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+    .ascii-text {
+      font-family: ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace;
+      font-size: 8.8px;
+      letter-spacing: 1.4px;
+      line-height: 9.5px;
+      font-weight: 600;
+    }
+  </style>
+
+  <!-- ================= BACKGROUND CANVAS ================= -->
+  <!-- Base background container -->
+  <rect x="0" y="0" width="1180" height="610" fill="#030712"/>
+
+  <!-- Ambient Light Orbs -->
+  <rect x="0" y="0" width="1180" height="610" fill="url(#radialGlow1)"/>
+  <rect x="0" y="0" width="1180" height="610" fill="url(#radialGlow2)"/>
+  <rect x="0" y="0" width="1180" height="610" fill="url(#radialGlow3)"/>
+
+  <!-- Geometric Grid Canvas -->
+  <rect x="12" y="12" width="1156" height="586" rx="22" fill="url(#techGrid)"/>
+
+  <!-- Outer Window Chrome Border Frame -->
+  <rect x="12" y="12" width="1156" height="586" rx="22"
+        fill="#0B132B" fill-opacity="0.75"
+        stroke="url(#borderShimmer)" stroke-width="1.5"
+        filter="url(#cardShadow)"/>
+
+  <!-- Top Glass Highlight Rim -->
+  <path d="M 34 13 L 1146 13" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="1.2"/>
+
+  <!-- ================= TOP TERMINAL HEADER ================= -->
+  <!-- Traffic Light Window Controls -->
+  <circle cx="38" cy="34" r="5.5" fill="#EF4444">
+    <animate attributeName="opacity" values="0.85;1;0.85" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="56" cy="34" r="5.5" fill="#F59E0B">
+    <animate attributeName="opacity" values="0.85;1;0.85" dur="3s" begin="0.3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="74" cy="34" r="5.5" fill="#10B981">
+    <animate attributeName="opacity" values="0.85;1;0.85" dur="3s" begin="0.6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Window Header Title -->
+  <text x="100" y="38" class="font-mono" font-size="12" font-weight="600" fill="#F8FAFC" letter-spacing="0.5">
+    developer@profile:~
+    <tspan fill="#22D3EE" font-weight="700"> [ ONLINE ]</tspan>
+    <tspan fill="#94A3B8" font-weight="400"> — session: 0x88F2 // kernel: v6.12.0</tspan>
+  </text>
+
+  <!-- Right Status Badges -->
+  <g transform="translate(1142, 28)">
+    <text x="0" y="10" text-anchor="end" class="font-mono" font-size="11" font-weight="500" fill="#94A3B8">
+      <tspan fill="#34D399">●</tspan> SYS_READY
+      <tspan fill="#94A3B8"> · </tspan>
+      LATENCY: <tspan fill="#22D3EE">12ms</tspan>
+      <tspan fill="#94A3B8"> · </tspan>
+      UPTIME: <tspan fill="#F8FAFC">99.99%</tspan>
+    </text>
+  </g>
+
+  <!-- Header Divider Line -->
+  <line x1="12" y1="54" x2="1168" y2="54" stroke="#1E293B" stroke-width="1" stroke-opacity="0.75"/>
+
+  <!-- ================= LEFT COLUMN: VISUAL.MAP & IDENTITY ================= -->
+  <!-- Left Top Card: VISUAL.MAP (372px height) -->
+  <g transform="translate(26, 68)">
+    <!-- Card Frame -->
+    <rect x="0" y="0" width="432" height="372" rx="14"
+          fill="#0F172A" fill-opacity="0.58"
+          stroke="#1E293B" stroke-width="1.2"/>
+
+    <!-- Inner Card Header -->
+    <rect x="0" y="0" width="432" height="32" rx="14" fill="#0F172A" fill-opacity="0.4"/>
+    <circle cx="16" cy="16" r="3.5" fill="#22D3EE"/>
+    <text x="28" y="20" class="font-mono" font-size="11" font-weight="700" fill="#F8FAFC" letter-spacing="0.5">
+      VISUAL.MAP
+      <tspan fill="#94A3B8" font-weight="500"> // BIO_MATRIX_RENDER</tspan>
+    </text>
+    <text x="416" y="20" text-anchor="end" class="font-mono" font-size="10" font-weight="600" fill="#34D399">
+      ● ACTIVE_NODE
+    </text>
+    <line x1="0" y1="32" x2="432" y2="32" stroke="#1E293B" stroke-width="1"/>
+
+    <!-- Viewfinder Inner Box -->
+    <rect x="10" y="40" width="412" height="322" rx="8"
+          fill="#030712" fill-opacity="0.6"
+          stroke="#1E293B" stroke-width="1"/>
+
+    <!-- Corner HUD Brackets -->
+    <!-- Top-Left -->
+    <path d="M 16 52 L 16 46 L 22 46" fill="none" stroke="#38BDF8" stroke-width="1.8"/>
+    <!-- Top-Right -->
+    <path d="M 406 46 L 416 46 L 416 52" fill="none" stroke="#38BDF8" stroke-width="1.8"/>
+    <!-- Bottom-Left -->
+    <path d="M 16 348 L 16 356 L 24 356" fill="none" stroke="#38BDF8" stroke-width="1.8"/>
+    <!-- Bottom-Right -->
+    <path d="M 408 356 L 416 356 L 416 348" fill="none" stroke="#38BDF8" stroke-width="1.8"/>
+
+    <!-- HUD Telemetry Markers (Left & Right) -->
+    <text x="20" y="60" class="font-mono" font-size="8.5" fill="#94A3B8" letter-spacing="0.5">TARGET: <tspan fill="#22D3EE">DEV_CORE</tspan></text>
+    <text x="20" y="72" class="font-mono" font-size="8.5" fill="#94A3B8" letter-spacing="0.5">AZIMUTH: <tspan fill="#F8FAFC">284.5°</tspan></text>
+    <text x="20" y="84" class="font-mono" font-size="8.5" fill="#94A3B8" letter-spacing="0.5">ELEV: <tspan fill="#34D399">+14.2°</tspan></text>
+
+    <text x="412" y="60" text-anchor="end" class="font-mono" font-size="8.5" fill="#94A3B8" letter-spacing="0.5">LAT: <tspan fill="#F8FAFC">37.77° N</tspan></text>
+    <text x="412" y="72" text-anchor="end" class="font-mono" font-size="8.5" fill="#94A3B8" letter-spacing="0.5">LNG: <tspan fill="#F8FAFC">122.41° W</tspan></text>
+    <text x="412" y="84" text-anchor="end" class="font-mono" font-size="8.5" fill="#94A3B8" letter-spacing="0.5">RES: <tspan fill="#22D3EE">46x30</tspan></text>
+
+    <!-- Scanline Sweep Bar with SMIL -->
+    <line x1="12" y1="42" x2="420" y2="42" stroke="url(#scanlineGrad)" stroke-width="2.2">
+      <animate attributeName="y1" values="42;334;42" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="y2" values="42;334;42" dur="6s" repeatCount="indefinite"/>
+    </line>
+
+    <!-- ASCII Portrait Render -->
+    <g clip-path="url(#leftMapClip)">
+      <text class="ascii-text" fill="url(#asciiGradient)" text-anchor="middle">
+        <animate attributeName="opacity" values="0.88;1;0.92;1;0.88" dur="4s" repeatCount="indefinite"/>
+    <tspan x="216" y="52.0">              .·:+*##%@@@@%##*+:·.              </tspan>
+    <tspan x="216" y="61.5">          .:*#%@@@@@@@@@@@@@@@@@@%#*:.          </tspan>
+    <tspan x="216" y="71.0">        .+#@@@@@@@@@@@@@@@@@@@@@@@@@@#+.        </tspan>
+    <tspan x="216" y="80.5">       *@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*       </tspan>
+    <tspan x="216" y="90.0">     .%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%.     </tspan>
+    <tspan x="216" y="99.5">     #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#     </tspan>
+    <tspan x="216" y="109.0">    :@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:    </tspan>
+    <tspan x="216" y="118.5">    =@@@@@@@@@%#*+===----===+*#%@@@@@@@@@@@=    </tspan>
+    <tspan x="216" y="128.0">    +@@@@@@#+:  .·:++****++:·.  :+%@@@@@@@@+    </tspan>
+    <tspan x="216" y="137.5">    *@@@@#:  .+#@@@@@@@@@@@@@@#+.  :#@@@@@@*    </tspan>
+    <tspan x="216" y="147.0">    %@@@*  .+@@@@@@@@@@@@@@@@@@@@+.  *@@@@@%    </tspan>
+    <tspan x="216" y="156.5">   .@@@#  :#@@@@@@@@@@@@@@@@@@@@@@#:  #@@@@@.   </tspan>
+    <tspan x="216" y="166.0">   :@@@:  +@@@@@@@@@@@@@@@@@@@@@@@@+  :@@@@@:   </tspan>
+    <tspan x="216" y="175.5">   :@@@.  %@@@#===*@@%::%@@*===#@@@%  .@@@@@:   </tspan>
+    <tspan x="216" y="185.0">   .@@@   %@@@:   +@@%  %@@+   :@@@%   @@@@@.   </tspan>
+    <tspan x="216" y="194.5">    %@@:  *@@@#:::#@@%  %@@#:::#@@@*  :@@@@%    </tspan>
+    <tspan x="216" y="204.0">    *@@#   *@@@@@@@@*    *@@@@@@@@*   #@@@@*    </tspan>
+    <tspan x="216" y="213.5">    +@@@+   .·:====·  ::  ·====:·.   +@@@@@+    </tspan>
+    <tspan x="216" y="223.0">    =@@@@:       .·:++++:·.       :@@@@@@=    </tspan>
+    <tspan x="216" y="232.5">    :@@@@@:     :*%@@@@@@%*:     :@@@@@@@:    </tspan>
+    <tspan x="216" y="242.0">     #@@@@@+:    .·:====:·.    :+#@@@@@@#     </tspan>
+    <tspan x="216" y="251.5">     .%@@@@@@#+::        ::+#@@@@@@@@@@%.     </tspan>
+    <tspan x="216" y="261.0">       *%@@@@@@@@@@@@@@@@@@@@@@@@@@@@%*       </tspan>
+    <tspan x="216" y="270.5">         :=*#%@@@@@@@@@@@@@@@@%#*=:           </tspan>
+    <tspan x="216" y="280.0">             :@@@@@@@@@@@@@@:                 </tspan>
+    <tspan x="216" y="289.5">          .:+#@@@@@@@@@@@@@@@@#+:.            </tspan>
+    <tspan x="216" y="299.0">       .=#@@@@@@@@@@@@@@@@@@@@@@@@#=.         </tspan>
+    <tspan x="216" y="308.5">     :*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*:       </tspan>
+    <tspan x="216" y="318.0">   .+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%+.     </tspan>
+    <tspan x="216" y="327.5">  =%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%=    </tspan>
+      </text>
+    </g>
+
+    <!-- Telemetry Sub-bar -->
+    <rect x="10" y="334" width="412" height="28" fill="#050A18" fill-opacity="0.85"/>
+    <line x1="10" y1="334" x2="422" y2="334" stroke="#1E293B" stroke-width="1"/>
+    <text x="216" y="352" text-anchor="middle" class="font-mono" font-size="9" font-weight="600" fill="#94A3B8">
+      <tspan fill="#22D3EE">●</tspan> MATRIX ENCODING: UTF-8
+      <tspan fill="#94A3B8"> · </tspan>
+      SHA-256: <tspan fill="#34D399">VERIFIED</tspan>
+      <tspan fill="#94A3B8"> · </tspan>
+      SIGNAL: <tspan fill="#F8FAFC">99.2%</tspan>
+    </text>
+  </g>
+
+  <!-- Left Bottom Card: COMMAND PROMPT & RUNTIME LOG (136px height) -->
+  <g transform="translate(26, 450)">
+    <rect x="0" y="0" width="432" height="136" rx="14"
+          fill="#0F172A" fill-opacity="0.58"
+          stroke="#1E293B" stroke-width="1.2"/>
+
+    <!-- Header bar -->
+    <rect x="0" y="0" width="432" height="28" rx="14" fill="#0F172A" fill-opacity="0.4"/>
+    <circle cx="16" cy="14" r="3.5" fill="#A78BFA"/>
+    <text x="28" y="18" class="font-mono" font-size="10.5" font-weight="700" fill="#F8FAFC" letter-spacing="0.5">
+      RUNTIME.PROFILE
+      <tspan fill="#94A3B8" font-weight="500"> // IDENTITY_MANIFEST</tspan>
+    </text>
+    <text x="416" y="18" text-anchor="end" class="font-mono" font-size="9.5" font-weight="600" fill="#22D3EE">
+      ~/profile $ ./status.sh
+    </text>
+    <line x1="0" y1="28" x2="432" y2="28" stroke="#1E293B" stroke-width="1"/>
+
+    <!-- Status Rows -->
+    <g transform="translate(16, 44)">
+      <!-- Line 1 -->
+      <text x="0" y="0" class="font-mono" font-size="10" fill="#94A3B8">
+        <tspan fill="#22D3EE" font-weight="700">&gt; PARADIGM  :</tspan>
+        <tspan fill="#F8FAFC"> Distributed Architecture &amp; Clean Code</tspan>
+      </text>
+
+      <!-- Line 2 -->
+      <text x="0" y="18" class="font-mono" font-size="10" fill="#94A3B8">
+        <tspan fill="#A78BFA" font-weight="700">&gt; PIPELINE  :</tspan>
+        <tspan fill="#F8FAFC"> Continuous Integration, Test &amp; Ship</tspan>
+      </text>
+
+      <!-- Line 3 -->
+      <text x="0" y="36" class="font-mono" font-size="10" fill="#94A3B8">
+        <tspan fill="#34D399" font-weight="700">&gt; STANDARD  :</tspan>
+        <tspan fill="#F8FAFC"> Production Hardened · Zero-Downtime</tspan>
+      </text>
+
+      <!-- Line 4 -->
+      <text x="0" y="54" class="font-mono" font-size="10" fill="#94A3B8">
+        <tspan fill="#FBBF24" font-weight="700">&gt; RUNTIME   :</tspan>
+        <tspan fill="#F8FAFC"> Cloud-Native · High-Throughput APIs</tspan>
+      </text>
+
+      <!-- Bottom badge -->
+      <rect x="0" y="64" width="400" height="20" rx="4" fill="#050A18" stroke="#1E293B" stroke-width="0.8"/>
+      <text x="200" y="78" text-anchor="middle" class="font-mono" font-size="9.5" font-weight="600" fill="#22D3EE">
+        ⚡ READY FOR HIGH-IMPACT COLLABORATION &amp; SCALE
+      </text>
+    </g>
+  </g>
+
+  <!-- ================= RIGHT COLUMN: SYSTEM.INFO (518px height) ================= -->
+  <g transform="translate(470, 68)">
+    <!-- Right Panel Outer Box -->
+    <rect x="0" y="0" width="684" height="518" rx="16"
+          fill="#0F172A" fill-opacity="0.58"
+          stroke="#1E293B" stroke-width="1.2"/>
+
+    <!-- Right Panel Header -->
+    <rect x="0" y="0" width="684" height="34" rx="16" fill="#0F172A" fill-opacity="0.4"/>
+    <circle cx="18" cy="17" r="3.5" fill="#34D399"/>
+    <text x="30" y="21" class="font-mono" font-size="11.5" font-weight="700" fill="#F8FAFC" letter-spacing="0.5">
+      SYSTEM.INFO
+      <tspan fill="#94A3B8" font-weight="500"> // PROFILE_DESCRIPTOR.JSON</tspan>
+    </text>
+    <text x="668" y="21" text-anchor="end" class="font-mono" font-size="10" font-weight="500" fill="#94A3B8">
+      HOST: <tspan fill="#22D3EE">0xLOCAL</tspan> · PORT: <tspan fill="#F8FAFC">443/TLS</tspan> · STATUS: <tspan fill="#34D399">READY</tspan>
+    </text>
+    <line x1="0" y1="34" x2="684" y2="34" stroke="#1E293B" stroke-width="1"/>
+
+    <!-- ================= SECTION 1: IDENTITY & ROLE ROTATION ================= -->
+    <g transform="translate(20, 50)">
+      <!-- Terminal prompt -->
+      <text x="0" y="0" class="font-mono" font-size="10.5" fill="#94A3B8">
+        <tspan fill="#22D3EE" font-weight="700">developer@system</tspan>:<tspan fill="#A78BFA">~/profile</tspan>$ cat ./developer_spec.md
+      </text>
+
+      <!-- Primary Name Display -->
+      <text x="0" y="28" class="font-sans" font-size="25" font-weight="800" fill="#F8FAFC" letter-spacing="0.2">
+        DEVELOPER / SOFTWARE ENGINEER
+      </text>
+
+      <!-- Animated Rotating Roles with SMIL and In-Line Blinking Cursors -->
+      <g transform="translate(0, 48)">
+        <text x="0" y="0" class="font-mono" font-size="13" font-weight="600" fill="#22D3EE">
+          &gt; ROLE:
+        </text>
+
+        <!-- Role 1: Full-Stack Systems Engineer -->
+        <g>
+          <animate attributeName="opacity" values="1;1;0;0;0;0;1" keyTimes="0;0.30;0.33;0.96;0.97;0.99;1" dur="9s" repeatCount="indefinite"/>
+          <text x="66" y="0" class="font-mono" font-size="13" font-weight="600" fill="#34D399">
+            Full-Stack Systems Engineer
+          </text>
+          <rect x="286" y="-12" width="8" height="15" fill="#34D399">
+            <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite"/>
+          </rect>
+        </g>
+
+        <!-- Role 2: Cloud & Distributed Systems Architect -->
+        <g>
+          <animate attributeName="opacity" values="0;0;1;1;0;0;0" keyTimes="0;0.33;0.36;0.63;0.66;0.99;1" dur="9s" repeatCount="indefinite"/>
+          <text x="66" y="0" class="font-mono" font-size="13" font-weight="600" fill="#A78BFA">
+            Cloud &amp; Distributed Architect
+          </text>
+          <rect x="302" y="-12" width="8" height="15" fill="#A78BFA">
+            <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite"/>
+          </rect>
+        </g>
+
+        <!-- Role 3: Open-Source Software Developer -->
+        <g>
+          <animate attributeName="opacity" values="0;0;0;0;1;1;0" keyTimes="0;0.66;0.69;0.96;0.97;0.99;1" dur="9s" repeatCount="indefinite"/>
+          <text x="66" y="0" class="font-mono" font-size="13" font-weight="600" fill="#22D3EE">
+            Open-Source Systems Developer
+          </text>
+          <rect x="308" y="-12" width="8" height="15" fill="#22D3EE">
+            <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite"/>
+          </rect>
+        </g>
+      </g>
+
+      <!-- Meta Badges Line -->
+      <g transform="translate(0, 68)">
+        <text x="0" y="0" class="font-mono" font-size="10" fill="#94A3B8">
+          <tspan fill="#22D3EE">📍 LOCATION:</tspan> Worldwide / Remote
+          <tspan fill="#94A3B8">   ·   </tspan>
+          <tspan fill="#34D399">⚡ FOCUS:</tspan> Distributed Systems &amp; Modern Web
+          <tspan fill="#94A3B8">   ·   </tspan>
+          <tspan fill="#A78BFA">🌐 MODE:</tspan> Continuous Delivery
+        </text>
+      </g>
+    </g>
+
+    <!-- ================= SECTION 2: 4-TILE HUD METRICS GRID ================= -->
+    <g transform="translate(20, 142)">
+      <!-- Tile 1 -->
+      <rect x="0" y="0" width="154" height="60" rx="8"
+            fill="#050A18" fill-opacity="0.7"
+            stroke="#1E293B" stroke-width="1"/>
+      <text x="12" y="16" class="font-mono" font-size="8.5" font-weight="700" fill="#22D3EE" letter-spacing="0.5">CORE DOMAIN</text>
+      <text x="12" y="34" class="font-sans" font-size="11.5" font-weight="700" fill="#F8FAFC">Full-Stack Systems</text>
+      <text x="12" y="48" class="font-mono" font-size="9" fill="#94A3B8">APIs &amp; Microservices</text>
+
+      <!-- Tile 2 -->
+      <rect x="164" y="0" width="154" height="60" rx="8"
+            fill="#050A18" fill-opacity="0.7"
+            stroke="#1E293B" stroke-width="1"/>
+      <text x="176" y="16" class="font-mono" font-size="8.5" font-weight="700" fill="#A78BFA" letter-spacing="0.5">SPECIALIZATION</text>
+      <text x="176" y="34" class="font-sans" font-size="11.5" font-weight="700" fill="#F8FAFC">High-Performance</text>
+      <text x="176" y="48" class="font-mono" font-size="9" fill="#94A3B8">Distributed &amp; Scalable</text>
+
+      <!-- Tile 3 -->
+      <rect x="328" y="0" width="154" height="60" rx="8"
+            fill="#050A18" fill-opacity="0.7"
+            stroke="#1E293B" stroke-width="1"/>
+      <text x="340" y="16" class="font-mono" font-size="8.5" font-weight="700" fill="#34D399" letter-spacing="0.5">INFRASTRUCTURE</text>
+      <text x="340" y="34" class="font-sans" font-size="11.5" font-weight="700" fill="#F8FAFC">Cloud-Native</text>
+      <text x="340" y="48" class="font-mono" font-size="9" fill="#94A3B8">Containers &amp; Kubernetes</text>
+
+      <!-- Tile 4 -->
+      <rect x="492" y="0" width="152" height="60" rx="8"
+            fill="#050A18" fill-opacity="0.7"
+            stroke="#1E293B" stroke-width="1"/>
+      <text x="504" y="16" class="font-mono" font-size="8.5" font-weight="700" fill="#FBBF24" letter-spacing="0.5">ENGINEERING</text>
+      <text x="504" y="34" class="font-sans" font-size="11.5" font-weight="700" fill="#F8FAFC">Production Ready</text>
+      <text x="504" y="48" class="font-mono" font-size="9" fill="#94A3B8">CI/CD &amp; Automation</text>
+    </g>
+
+    <!-- ================= SECTION 3: TECH STACK PILLS ================= -->
+    <g transform="translate(20, 218)">
+      <text x="0" y="0" class="font-mono" font-size="10.5" font-weight="700" fill="#F8FAFC" letter-spacing="0.5">
+        <tspan fill="#22D3EE">●</tspan> TECH.STACK // FOUNDATIONAL TOOLCHAIN
+      </text>
+
+      <!-- Row 1: Languages & Core Frameworks -->
+      <g transform="translate(0, 10)">
+        <!-- TypeScript -->
+        <g transform="translate(0, 0)">
+          <rect width="92" height="23" rx="5" fill="#111C38" stroke="#1E293B" stroke-width="1"/>
+          <circle cx="10" cy="11.5" r="2.5" fill="#22D3EE"/>
+          <text x="18" y="15" class="font-mono" font-size="9.5" font-weight="600" fill="#E2E8F0">TypeScript</text>
+        </g>
+        <!-- Python -->
+        <g transform="translate(100, 0)">
+          <rect width="74" height="23" rx="5" fill="#111C38" stroke="#1E293B" stroke-width="1"/>
+          <circle cx="10" cy="11.5" r="2.5" fill="#34D399"/>
+          <text x="18" y="15" class="font-mono" font-size="9.5" font-weight="600" fill="#E2E8F0">Python</text>
+        </g>
+        <!-- Go -->
+        <g transform="translate(182, 0)">
+          <rect width="54" height="23" rx="5" fill="#111C38" stroke="#1E293B" stroke-width="1"/>
+          <circle cx="10" cy="11.5" r="2.5" fill="#22D3EE"/>
+          <text x="18" y="15" class="font-mono" font-size="9.5" font-weight="600" fill="#E2E8F0">Go</text>
+        </g>
+        <!-- Rust -->
+        <g transform="translate(244, 0)">
+          <rect width="62" height="23" rx="5" fill="#111C38" stroke="#1E293B" stroke-width="1"/>
+          <circle cx="10" cy="11.5" r="2.5" fill="#FBBF24"/>
+          <text x="18" y="15" class="font-mono" font-size="9.5" font-weight="600" fill="#E2E8F0">Rust</text>
+        </g>
+        <!-- React / Next.js -->
+        <g transform="translate(314, 0)">
+          <rect width="124" height="23" rx="5" fill="#111C38" stroke="#1E293B" stroke-width="1"/>
+          <circle cx="10" cy="11.5" r="2.5" fill="#22D3EE"/>
+          <text x="18" y="15" class="font-mono" font-size="9.5" font-weight="600" fill="#E2E8F0">React / Next.js</text>
+        </g>
+        <!-- Node.js -->
+        <g transform="translate(446, 0)">
+          <rect width="78" height="23" rx="5" fill="#111C38" stroke="#1E293B" stroke-width="1"/>
+          <circle cx="10" cy="11.5" r="2.5" fill="#34D399"/>
+          <text x="18" y="15" class="font-mono" font-size="9.5" font-weight="600" fill="#E2E8F0">Node.js</text>
+        </g>
+        <!-- GraphQL -->
+        <g transform="translate(532, 0)">
+          <rect width="82" height="23" rx="5" fill="#111C38" stroke="#1E293B" stroke-width="1"/>
+          <circle cx="10" cy="11.5" r="2.5" fill="#A78BFA"/>
+          <text x="18" y="15" class="font-mono" font-size="9.5" font-weight="600" fill="#E2E8F0">GraphQL</text>
+        </g>
+      </g>
+
+      <!-- Row 2: Systems, DBs & Cloud -->
+      <g transform="translate(0, 39)">
+        <!-- PostgreSQL -->
+        <g transform="translate(0, 0)">
+          <rect width="96" height="23" rx="5" fill="#111C38" stroke="#1E293B" stroke-width="1"/>
+          <circle cx="10" cy="11.5" r="2.5" fill="#22D3EE"/>
+          <text x="18" y="15" class="font-mono" font-size="9.5" font-weight="600" fill="#E2E8F0">PostgreSQL</text>
+        </g>
+        <!-- Docker -->
+        <g transform="translate(104, 0)">
+          <rect width="74" height="23" rx="5" fill="#111C38" stroke="#1E293B" stroke-width="1"/>
+          <circle cx="10" cy="11.5" r="2.5" fill="#22D3EE"/>
+          <text x="18" y="15" class="font-mono" font-size="9.5" font-weight="600" fill="#E2E8F0">Docker</text>
+        </g>
+        <!-- Kubernetes -->
+        <g transform="translate(186, 0)">
+          <rect width="98" height="23" rx="5" fill="#111C38" stroke="#1E293B" stroke-width="1"/>
+          <circle cx="10" cy="11.5" r="2.5" fill="#A78BFA"/>
+          <text x="18" y="15" class="font-mono" font-size="9.5" font-weight="600" fill="#E2E8F0">Kubernetes</text>
+        </g>
+        <!-- AWS Cloud -->
+        <g transform="translate(292, 0)">
+          <rect width="96" height="23" rx="5" fill="#111C38" stroke="#1E293B" stroke-width="1"/>
+          <circle cx="10" cy="11.5" r="2.5" fill="#FBBF24"/>
+          <text x="18" y="15" class="font-mono" font-size="9.5" font-weight="600" fill="#E2E8F0">AWS Cloud</text>
+        </g>
+        <!-- Redis -->
+        <g transform="translate(396, 0)">
+          <rect width="68" height="23" rx="5" fill="#111C38" stroke="#1E293B" stroke-width="1"/>
+          <circle cx="10" cy="11.5" r="2.5" fill="#EF4444"/>
+          <text x="18" y="15" class="font-mono" font-size="9.5" font-weight="600" fill="#E2E8F0">Redis</text>
+        </g>
+        <!-- Kafka / MQ -->
+        <g transform="translate(472, 0)">
+          <rect width="92" height="23" rx="5" fill="#111C38" stroke="#1E293B" stroke-width="1"/>
+          <circle cx="10" cy="11.5" r="2.5" fill="#22D3EE"/>
+          <text x="18" y="15" class="font-mono" font-size="9.5" font-weight="600" fill="#E2E8F0">Kafka / MQ</text>
+        </g>
+        <!-- TailwindCSS -->
+        <g transform="translate(572, 0)">
+          <rect width="72" height="23" rx="5" fill="#111C38" stroke="#1E293B" stroke-width="1"/>
+          <circle cx="10" cy="11.5" r="2.5" fill="#22D3EE"/>
+          <text x="18" y="15" class="font-mono" font-size="9.5" font-weight="600" fill="#E2E8F0">Tailwind</text>
+        </g>
+      </g>
+
+      <!-- Row 3: DevOps & Architecture -->
+      <g transform="translate(0, 68)">
+        <!-- Linux / Shell -->
+        <g transform="translate(0, 0)">
+          <rect width="104" height="23" rx="5" fill="#111C38" stroke="#1E293B" stroke-width="1"/>
+          <circle cx="10" cy="11.5" r="2.5" fill="#FBBF24"/>
+          <text x="18" y="15" class="font-mono" font-size="9.5" font-weight="600" fill="#E2E8F0">Linux / Shell</text>
+        </g>
+        <!-- CI/CD Pipelines -->
+        <g transform="translate(112, 0)">
+          <rect width="120" height="23" rx="5" fill="#111C38" stroke="#1E293B" stroke-width="1"/>
+          <circle cx="10" cy="11.5" r="2.5" fill="#34D399"/>
+          <text x="18" y="15" class="font-mono" font-size="9.5" font-weight="600" fill="#E2E8F0">CI/CD Pipelines</text>
+        </g>
+        <!-- gRPC / Protobuf -->
+        <g transform="translate(240, 0)">
+          <rect width="120" height="23" rx="5" fill="#111C38" stroke="#1E293B" stroke-width="1"/>
+          <circle cx="10" cy="11.5" r="2.5" fill="#22D3EE"/>
+          <text x="18" y="15" class="font-mono" font-size="9.5" font-weight="600" fill="#E2E8F0">gRPC / Protobuf</text>
+        </g>
+        <!-- Terraform / IaC -->
+        <g transform="translate(368, 0)">
+          <rect width="122" height="23" rx="5" fill="#111C38" stroke="#1E293B" stroke-width="1"/>
+          <circle cx="10" cy="11.5" r="2.5" fill="#A78BFA"/>
+          <text x="18" y="15" class="font-mono" font-size="9.5" font-weight="600" fill="#E2E8F0">Terraform / IaC</text>
+        </g>
+        <!-- Security & Auth -->
+        <g transform="translate(498, 0)">
+          <rect width="124" height="23" rx="5" fill="#111C38" stroke="#1E293B" stroke-width="1"/>
+          <circle cx="10" cy="11.5" r="2.5" fill="#34D399"/>
+          <text x="18" y="15" class="font-mono" font-size="9.5" font-weight="600" fill="#E2E8F0">Security &amp; Auth</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- ================= SECTION 4: SELECTED ENGINEERING SYSTEMS ================= -->
+    <g transform="translate(20, 328)">
+      <text x="0" y="0" class="font-mono" font-size="10.5" font-weight="700" fill="#F8FAFC" letter-spacing="0.5">
+        <tspan fill="#A78BFA">●</tspan> ENGINEERING PROOF // SELECTED SYSTEMS &amp; ARCHITECTURE
+      </text>
+
+      <!-- Project Card A -->
+      <g transform="translate(0, 10)">
+        <rect x="0" y="0" width="316" height="74" rx="8"
+              fill="#050A18" fill-opacity="0.7"
+              stroke="#1E293B" stroke-width="1"/>
+        <text x="12" y="18" class="font-mono" font-size="9" font-weight="700" fill="#22D3EE">
+          SYS_01 // RUNTIME INFRASTRUCTURE
+        </text>
+        <text x="12" y="34" class="font-sans" font-size="12" font-weight="700" fill="#F8FAFC">
+          High-Throughput Distributed Services
+        </text>
+        <text x="12" y="48" class="font-sans" font-size="10" fill="#94A3B8">
+          Event-driven architecture, resilient API gateway &amp; caching.
+        </text>
+        <text x="12" y="63" class="font-mono" font-size="8.5" font-weight="600" fill="#34D399">
+          STACK: Go · Kafka · Redis · gRPC · Docker
+        </text>
+      </g>
+
+      <!-- Project Card B -->
+      <g transform="translate(328, 10)">
+        <rect x="0" y="0" width="316" height="74" rx="8"
+              fill="#050A18" fill-opacity="0.7"
+              stroke="#1E293B" stroke-width="1"/>
+        <text x="12" y="18" class="font-mono" font-size="9" font-weight="700" fill="#A78BFA">
+          SYS_02 // DEVELOPER TOOLING &amp; CLOUD
+        </text>
+        <text x="12" y="34" class="font-sans" font-size="12" font-weight="700" fill="#F8FAFC">
+          Full-Stack Web &amp; Automation Platform
+        </text>
+        <text x="12" y="48" class="font-sans" font-size="10" fill="#94A3B8">
+          Extensible CLI tooling, telemetry dashboards &amp; CI/CD runners.
+        </text>
+        <text x="12" y="63" class="font-mono" font-size="8.5" font-weight="600" fill="#22D3EE">
+          STACK: TypeScript · Next.js · K8s · PostgreSQL
+        </text>
+      </g>
+    </g>
+
+    <!-- ================= SECTION 5: TERMINAL ENDPOINTS / LINKS FOOTER ================= -->
+    <g transform="translate(20, 432)">
+      <!-- Command prompt -->
+      <text x="0" y="0" class="font-mono" font-size="10" fill="#94A3B8">
+        <tspan fill="#22D3EE">developer@system</tspan>:<tspan fill="#A78BFA">~/endpoints</tspan>$ ./connect --status
+      </text>
+
+      <!-- Link Pills Row (Distributed across 644px) -->
+      <g transform="translate(0, 10)">
+        <!-- Endpoint 1: GitHub -->
+        <g transform="translate(0, 0)">
+          <rect width="118" height="30" rx="6"
+                fill="#111C38" stroke="#1E293B" stroke-width="1"/>
+          <circle cx="12" cy="15" r="3" fill="#34D399"/>
+          <text x="22" y="19" class="font-mono" font-size="10" font-weight="600" fill="#E2E8F0">
+            GitHub Profile
+          </text>
+        </g>
+
+        <!-- Endpoint 2: Portfolio Web -->
+        <g transform="translate(131, 0)">
+          <rect width="118" height="30" rx="6"
+                fill="#111C38" stroke="#1E293B" stroke-width="1"/>
+          <circle cx="12" cy="15" r="3" fill="#22D3EE"/>
+          <text x="22" y="19" class="font-mono" font-size="10" font-weight="600" fill="#E2E8F0">
+            Portfolio Web
+          </text>
+        </g>
+
+        <!-- Endpoint 3: LinkedIn -->
+        <g transform="translate(262, 0)">
+          <rect width="128" height="30" rx="6"
+                fill="#111C38" stroke="#1E293B" stroke-width="1"/>
+          <circle cx="12" cy="15" r="3" fill="#A78BFA"/>
+          <text x="22" y="19" class="font-mono" font-size="10" font-weight="600" fill="#E2E8F0">
+            Professional Bio
+          </text>
+        </g>
+
+        <!-- Endpoint 4: Contact -->
+        <g transform="translate(403, 0)">
+          <rect width="118" height="30" rx="6"
+                fill="#111C38" stroke="#1E293B" stroke-width="1"/>
+          <circle cx="12" cy="15" r="3" fill="#FBBF24"/>
+          <text x="22" y="19" class="font-mono" font-size="10" font-weight="600" fill="#E2E8F0">
+            Email Contact
+          </text>
+        </g>
+
+        <!-- Endpoint 5: Docs -->
+        <g transform="translate(526, 0)">
+          <rect width="118" height="30" rx="6"
+                fill="#111C38" stroke="#1E293B" stroke-width="1"/>
+          <circle cx="12" cy="15" r="3" fill="#34D399"/>
+          <text x="22" y="19" class="font-mono" font-size="10" font-weight="600" fill="#E2E8F0">
+            Technical Docs
+          </text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
